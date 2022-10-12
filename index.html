@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="custom.css" />
+    <title>Avatar Generator</title>
+  </head>
+  <body class="w-full min-h-screen bg-[#f2f2f2]">
+    <h1 class="text-3xl font-bold mx-auto text-center p-4 text-indigo-900">
+      Alpaca Avatar Generator
+    </h1>
+    <main class="grid grid-cols-2 w-1/2 mx-auto mt-8 gap-12">
+      <div class="w-full relative">
+        <img
+          name="backgrounds"
+          src="assets/img/backgrounds/blue50.png"
+          class="absolute image"
+          alt=""
+        />
+        <img name="hair" src="assets/img//hair/bang.png" class="absolute image" alt="" />
+        <img
+          name="neck"
+          src="assets/img//neck/bend-backward.png"
+          class="absolute image"
+          alt=""
+        />
+        <img
+          name="ears"
+          src="assets/img//ears/tilt-backward.png"
+          class="absolute image"
+          alt=""
+        />
+        <img name="eyes" src="assets/img//eyes/angry.png" class="absolute image" alt="" />
+        <img
+          name="leg"
+          src="assets/img//leg/bubble-tea.png"
+          class="absolute image"
+          alt=""
+        />
+        <img
+          name="mouth"
+          src="assets/img//mouth/astonished.png"
+          class="absolute image"
+          alt=""
+        />
+
+        <img
+          name="accessories"
+          src="assets/img/accessories/flower.png"
+          class="absolute image"
+          alt=""
+        />
+      </div>
+
+      <!-----------
+      COLUMN 2
+      ----------->
+      <div class="w-full">
+        <div class="space-y-4">
+          <h2 class="font-bold text-xl text-indigo-900 tracking-wide">Select Part</h2>
+          <!-----------
+          Buttons
+          ----------->
+          <div id="part" class="flex flex-wrap gap-2">
+            <button class="btn selected">backgrounds</button>
+            <button class="btn">hair</button>
+            <button class="btn">neck</button>
+            <button class="btn">ears</button>
+            <button class="btn">eyes</button>
+            <button class="btn">leg</button>
+            <button class="btn">mouth</button>
+            <button class="btn">accessories</button>
+          </div>
+          <h2 class="font-bold text-xl text-indigo-900 tracking-wide pt-8 pb-4">
+            Select Style
+          </h2>
+        </div>
+
+        <!-- STYLE -->
+        <div id="style">
+          <div id="backgrounds" class="flex flex-wrap gap-2">
+            <button class="btn selected">blue50</button>
+            <button class="btn">blue60</button>
+            <button class="btn">blue70</button>
+            <button class="btn">darkblue30</button>
+            <button class="btn">darkblue50</button>
+            <button class="btn">darkblue70</button>
+            <button class="btn">green50</button>
+            <button class="btn">green60</button>
+            <button class="btn">green70</button>
+          </div>
+
+          <!---------------------
+        STYLE HAIRS
+        ----------------------->
+          <div id="hair" class="flex flex-wrap gap-2 hidden">
+            <button class="btn selected">bang</button>
+            <button class="btn">curls</button>
+            <button class="btn">default</button>
+            <button class="btn">elegant</button>
+            <button class="btn">fancy</button>
+            <button class="btn">quiff</button>
+            <button class="btn">short</button>
+          </div>
+
+          <!---------------------
+        STYLE LEGS
+        ----------------------->
+          <div id="leg" class="flex flex-wrap gap-2 hidden">
+            <button class="btn selected">bubble-tea</button>
+            <button class="btn">cookie</button>
+            <button class="btn">default</button>
+            <button class="btn">game-console</button>
+            <button class="btn">titl-backward</button>
+            <button class="btn">tilt-forward</button>
+            <button class="btn">short</button>
+          </div>
+
+          <!---------------------
+        STYLE MOUTH
+        ----------------------->
+          <div id="mouth" class="flex flex-wrap gap-2 hidden">
+            <button class="btn selected">astonished</button>
+            <button class="btn">eating</button>
+            <button class="btn">default</button>
+            <button class="btn">laugh</button>
+            <button class="btn">tongue</button>
+          </div>
+
+          <!---------------------
+        STYLE NECK
+        ----------------------->
+          <div id="neck" class="flex flex-wrap gap-2 neck hidden">
+            <button class="btn selected">bend-backward</button>
+            <button class="btn">bend-forward</button>
+            <button class="btn">default</button>
+            <button class="btn">thick</button>
+          </div>
+
+          <!---------------------
+        STYLE EYES
+        ----------------------->
+          <div id="eyes" class="flex flex-wrap gap-2 hidden">
+            <button class="btn selected">angry</button>
+            <button class="btn">naughty</button>
+            <button class="btn">default</button>
+            <button class="btn">panda</button>
+            <button class="btn">smart</button>
+            <button class="btn">star</button>
+          </div>
+
+          <!---------------------
+        STYLE EARS
+        ----------------------->
+          <div id="ears" class="flex flex-wrap gap-2 hidden">
+            <button class="btn selected">tilt-backward</button>
+            <button class="btn">tilt-forward</button>
+            <button class="btn">default</button>
+          </div>
+
+          <!---------------------
+        STYLE ACCESORIES
+        ----------------------->
+          <div id="accessories" class="flex flex-wrap gap-2 hidden">
+            <button class="btn selected">flower</button>
+            <button class="btn">headphone</button>
+            <button class="btn">earings</button>
+            <button class="btn">glasses</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="text-center">
+      <a class="download btn2" download>Download</a>
+    </div>
+    <canvas id="canvas" class="absolute -top-[100%] -left-[100%]"></canvas>
+    <script src="scripts.js" defer></script>
+  </body>
+</html>

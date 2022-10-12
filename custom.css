@@ -1,0 +1,33 @@
+.btn {
+  font-family: monospace;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  color: indigo;
+  border: 1px solid indigo;
+  font-weight: 700;
+}
+.btn2 {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translate(-50%);
+  font-family: monospace;
+  padding: 0.8rem 1rem;
+  border-radius: 9999px;
+  color: white;
+  background-color: indigo;
+  width: 300px;
+  margin: auto;
+  font-weight: 700;
+  transition: all 0.5s;
+  border: 1px solid indigo;
+}
+.btn2:hover {
+  color: indigo;
+  background-color: transparent;
+}
+
+.selected {
+  background-color: indigo;
+  color: white;
+}
